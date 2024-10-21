@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prime Avenue Venture - Plot Owners</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Prime Avenue Venture</h1>
+        <p>Plot Owners Information Portal</p>
+    </header>
+
+    <section class="form-section">
+        <h2>Plot Owner Information Form</h2>
+        <form id="ownerForm">
+            <label for="plotNumber">Plot Number:</label>
+            <input type="text" id="plotNumber" name="plotNumber" required>
+
+            <label for="ownerName">Owner's Name:</label>
+            <input type="text" id="ownerName" name="ownerName" required>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section class="dashboard-section">
+        <h2>Plot Owners Dashboard</h2>
+        <div id="dashboard">
+            <!-- Data will be displayed here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Prime Avenue Venture. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
