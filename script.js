@@ -7,7 +7,7 @@ document.getElementById('ownerForm').addEventListener('submit', function(event) 
     const phoneNumber = document.getElementById('phoneNumber').value;
     const email = document.getElementById('email').value;
     
-    // Validation (for example, check if all required fields are filled)
+    // Simple validation
     if (!plotNumber || !ownerName || !phoneNumber) {
         alert("Please fill in all required fields.");
         return;
@@ -15,15 +15,15 @@ document.getElementById('ownerForm').addEventListener('submit', function(event) 
     
     // Add data to the dashboard
     const dashboard = document.getElementById('dashboard');
-    const newEntry = document.createElement('div');
-    newEntry.innerHTML = `
+    const newCard = document.createElement('div');
+    newCard.classList.add('dashboard-item');
+    newCard.innerHTML = `
         <h3>Plot Number: ${plotNumber}</h3>
-        <p>Owner's Name: ${ownerName}</p>
-        <p>Phone Number: ${phoneNumber}</p>
-        <p>Email: ${email || 'Not provided'}</p>
-        <hr>
+        <p><strong>Owner:</strong> ${ownerName}</p>
+        <p><strong>Phone:</strong> ${phoneNumber}</p>
+        <p><strong>Email:</strong> ${email || 'Not provided'}</p>
     `;
-    dashboard.appendChild(newEntry);
+    dashboard.appendChild(newCard);
     
     // Clear the form
     document.getElementById('ownerForm').reset();
